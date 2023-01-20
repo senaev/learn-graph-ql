@@ -1,3 +1,4 @@
 import { apolloClient } from "./apollo-client";
+import { renderLayout } from "./layout";
 
-console.log(apolloClient)
+renderLayout(apolloClient)

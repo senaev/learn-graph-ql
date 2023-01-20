@@ -1,11 +1,14 @@
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, gql, TypedDocumentNode } from '@apollo/client';
+import { Query } from '../graphql-types'
 
-const LIST_QUERY = gql`
+const LIST_QUERY: TypedDocumentNode<Query> = gql`
+
 query Query {
   list {
     id
   }
 }
+
 `;
 
 const client = new ApolloClient({
